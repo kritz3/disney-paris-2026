@@ -28,12 +28,13 @@
 
 ### Three-session daily rhythm
 1. **Morning** 08:30 – ~12:00 — Extra Magic Time + first hour of full open. Cool, lowest queues.
-2. **Midday break** ~14:15 – ~18:15 at hotel. Showers, A/C, baby naps. Mandatory in 35°C. Net break ≈3:15 after Santa Fe walk.
+2. **Midday break** ~14:15 – ~18:15 at hotel. **Take the free hotel shuttle**, not the walk — riverside path is unshaded and brutal in 35°C with a stroller. Walk only as fallback if shuttle wait >15 min. Showers, A/C, baby naps. Mandatory.
 3. **Evening** ~18:30 – close — rerides, atmosphere, nighttime rides.
 
 ### Food
 - **Breakfast:** hotel (included)
-- **Lunch:** Franprix sandwiches in shaded park spots
+- **Lunch:** Franprix perishables eaten **at hotel during midday break**, not in-park (mayo + 35°C for 4 hours = food poisoning risk; benches in park are scarce anyway). Carry **shelf-stable snacks in-park**: granola bars, fruit, jerky, bottled milk for baby.
+- **Tue exception:** quick A/C snack in-park ~12:30 before the dense thriller afternoon session; full lunch at hotel post-15:00.
 - **Dinner:** quick service in parks or Disney Village
 - **Possible:** Bistrot Chez Rémy lunch Wed — book Tue evening from hotel via app if available; skip if not. Do NOT book in advance.
 
@@ -59,6 +60,7 @@ For adult-thriller back-to-backs (Tue afternoon especially):
 
 ### Walking friction (hidden enemy)
 Santa Fe + park hopping + cross-land routes = a LOT of walking at 35°C.
+- **Default to the hotel shuttle** for Santa Fe transit (see midday break above).
 - **Protect microbreaks**: 10 min shade + cold drink is *operational maintenance*, not failure.
 - Bake 1–2 microbreak slots per session — they're not in the table because they're everywhere.
 
@@ -106,6 +108,7 @@ Each ride scored **1–5**. **When falling behind, drop lowest scores first.**
 ### Evening (18:30 – close)
 | Time | Attraction | Land | Score | Notes |
 |---|---|---|---|---|
+| ~17:30⚠️ | Disney Stars on Parade | Main Street → Fantasyland route | 3 | **VERIFY parade time in app — typically 17:30 in late May.** Just 15-min duck-in to catch the **steampunk Maleficent dragon breathing fire** (boys will remember it forever). Stroll up 15 min before to small world / Discoveryland transition, watch, peel off. Don't camp. If parade is at this time, arrive park early instead of normal evening start. |
 | 19:00 | Star Tours | Discoveryland | 3 | Rider Switch |
 | 19:30 | Hyperspace Mountain | Discoveryland | 3 | Rider Switch — 8yo rides. PA+RS stack candidate. |
 | 20:00 | Autopia | Discoveryland | 3 | **8yo drives** (132cm — confirm at gate; passenger fallback pre-loaded) |
@@ -176,15 +179,17 @@ If Frozen is down at 08:30 (new ride, downtime common): **pivot to Anna & Elsa m
 | 11:10 | Mickey and the Magician | Production Courtyard | **5** | 45 min show — A/C anchor |
 | 12:00 | Lunch — Chez Rémy if booked Tue night | — | — | |
 
-### Early afternoon (13:30 – 14:30) — Hop to Disneyland Park
-> **Furnace-avoidance session.** Default plan: PhilharMagic repeat OR early hotel return. Original items kept below but de-prioritized — only attempt if temp has dropped or family energy is unexpectedly high.
+### Early afternoon (13:00 – 14:30) — TOGETHER show, then hop
+> **Recommended:** stay in Adventure World for TOGETHER (A/C theater), then hop to Disneyland Park briefly before hotel. Only attempt the lower-scored items if energy is unexpectedly high.
 
 | Time | Attraction | Land | Score | Notes |
 |---|---|---|---|---|
-| 13:40 | Mickey's PhilharMagic 🔁 *or* early hotel | Fantasyland | 3 | **Recommended default** — dark A/C or escape the heat |
-| 13:40 | Alice's Curious Labyrinth | Fantasyland | 1⚠️ | **Claimed closed 5 May – 2 Jul 2026 — VERIFY in app.** Even if open: concrete heat trap, no shade — skip in 35°C |
-| 13:55 | La Cabane des Robinson | Adventureland | 1 | Outdoor stair climb in dead, humid air — meltdown risk. Skip unless cool |
-| 14:10 | Le Passage Enchanté d'Aladdin | Adventureland | 1 | Optional — covered walk, shaded |
+| ~13:00⚠️ | TOGETHER: a Pixar Musical | Adventure World — Studio Theater | 4 | **VERIFY showtime in app — typically multiple per day.** ~35 min, A/C, 12-piece live orchestra. Widely rated as one of the best park shows. Baby-friendly sit-down. **Only do if not too tired** — this is the "before hotel" energy check. |
+| 13:40 | Hop to Disneyland Park | — | — | After show |
+| 14:00 | Mickey's PhilharMagic 🔁 *or* early hotel | Fantasyland | 2 | If energy holds |
+| 14:10 | Alice's Curious Labyrinth | Fantasyland | 1⚠️ | **Claimed closed 5 May – 2 Jul 2026 — VERIFY in app.** Even if open: concrete heat trap, no shade — skip in 35°C |
+| 14:20 | La Cabane des Robinson | Adventureland | 1 | Outdoor stair climb in dead, humid air — meltdown risk. Skip unless cool |
+| 14:25 | Le Passage Enchanté d'Aladdin | Adventureland | 1 | Optional — covered walk, shaded |
 
 ### Evening (18:15 – close)
 | Time | Attraction | Land | Score | Notes |
@@ -251,11 +256,31 @@ Drop in this order — lowest pain first:
 
 ---
 
-## Deliberate skips
+## Hard skips (with reasons)
 
-**Not worth the time:** Carrousel de Lancelot, Mad Hatter's Tea Cups, Orbitron, Disneyland Railroad, Main Street Vehicles, Les Mystères du Nautilus, Flying Carpets, Pocahontas Indian Village, Frontierland Playground.
+These are genuinely *don't bother*. If tempted in-park, the reason is your override:
 
-**Secondary shows skipped:** TOGETHER (Pixar Musical), Disney Junior Dream Factory, Stitch Live!, Princess Pavilion (2hr+ standby), daytime parades.
+| Attraction | Reason to skip |
+|---|---|
+| Princess Pavilion | 2hr+ standby for a single meet — never worth it |
+| Disney Junior Dream Factory | Designed for under-5s — 8yo will check out, 6yo borderline |
+| Stitch Live! | Virtual queue friction + technical glitches common — high overhead for one short show |
+
+## Bonus / opportunistic adds (score 1 — pick up if ahead of schedule)
+
+Not slotted into the day plan. Visible here so you can pick one up in a gap — never chase them, never feel bad about skipping. All score 1 unless noted.
+
+| Attraction | Where | Best window | Note |
+|---|---|---|---|
+| Orbitron | Discoveryland | If Hyperspace queue is moving slowly | Spinner — Dumbo already covers this format |
+| Mad Hatter's Tea Cups | Fantasyland | Cool morning only | Nausea risk in heat |
+| Carrousel de Lancelot | Fantasyland | If baby happy + 6yo wants | Boys may feel too old |
+| Flying Carpets over Agrabah | Toon Studio | If Tue morning is flowing well | Standard spinner |
+| Les Mystères du Nautilus | Discoveryland | Brief cool-down break | Potentially claustrophobic — bail if baby fusses |
+| Disneyland Railroad | Main Street loop | Need a sit-down circuit | Slow but it's a 20-min seated A/C-adjacent break |
+| Main Street Vehicles | Main Street | Walking up Main St with time | Low capacity novelty |
+| Pocahontas Indian Village | Frontierland | Cool morning only | Outdoor play area |
+| Frontierland Playground | Frontierland | If 6yo needs run-around time | Outdoor — heat risk |
 
 ---
 
