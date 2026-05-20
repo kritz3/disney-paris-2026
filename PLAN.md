@@ -6,7 +6,18 @@
 **Tickets:** 3-day, 2-park — assumed Park Hopper (verify on arrival)
 **Forecast:** ~35°C — defining trip constraint
 
-> **Operating principle:** This is a **priority framework**, not a checklist. Sequence and times are anchors; scores tell you what to drop when reality diverges. Obey the drop order, not the table.
+---
+
+## Philosophy
+
+This is a **priority framework**, not a checklist. Six operating principles drive every decision in this plan:
+
+1. **Maximalist list, not curated.** Everything we might want to do is in here, scored 1–5. Better to see something and skip it than not know it was an option. The Bonus tier captures opportunistic adds.
+2. **Scores drive in-park decisions.** When tired or behind, drop by score — don't deliberate in the moment. The hard thinking is done now so the in-park execution is just "drop the lowest score left in this session."
+3. **Times are anchors, not deadlines.** Sequence and pacing matter; running 20 min behind is data, not failure.
+4. **Pre-committed decisions beat in-the-moment ones.** Phantom Manor as Monday's designated slip, Tower of Terror as opt-in via POV viewing at hotel, Disney Dreams at 21:30 by family state, Crush's PA at 09:25 — decide once, execute without renegotiating in the queue.
+5. **Microbreaks and skips aren't failures.** Operational maintenance. Shade + cold drink is a tactic. So is walking out of Disney Dreams gracefully.
+6. **Family state > ride throughput.** Especially evenings (Tue = easy magic, Wed = victory lap). The best memories won't come from completing the table.
 
 ---
 
