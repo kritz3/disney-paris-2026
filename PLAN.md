@@ -210,7 +210,7 @@ If Frozen is down at 08:30 (new ride, downtime common): **pivot to Anna & Elsa m
 | 20:00 | Big Thunder 🔁 | Frontierland | 3 | Full dark — signature reride |
 | 20:40 | Pirates 🔁 | Adventureland | 1 | Final reride |
 | 21:10 | Fantasyland walk-on | Fantasyland | 2 | Whatever's short |
-| 22:45 | Disney Dreams! | Castle | 3⚠️ | **Verify it's actually running Wed night** (sometimes select nights only in shoulder season). Decide at 21:30 by family state — walking out gracefully is not failure. |
+| ~22:30⚠️ | **Disney Tales of Magic** *or* **Cascade of Lights** | Castle / Adventure Bay | 3 | **VERIFY both show names + times in app.** Pre-committed 21:30 family-state check decides whether to brave a late night. Then choose: *Tales of Magic* (Disneyland Park castle, ~22:30–22:40 — bridge refurb means no fountains but massive extra pyro), or *Cascade of Lights* (Adventure World, aquatic drone fleet skimming the lake — would require being at Adventure World, not Disneyland Park). **You cannot do both** — pick one or walk out gracefully. |
 
 ---
 
@@ -323,12 +323,12 @@ Not slotted into the day plan. Visible here so you can pick one up in a gap — 
 - Weather
 - **Spider-Man W.E.B. throughput** (PA decision input)
 - **Tue night:** check Chez Rémy lunch availability for Wed
-- **Tue night:** verify Disney Dreams! Wed showtime
+- **Tue night:** verify Wed nighttime show names + times: **Disney Tales of Magic** (Castle, ~22:30–22:40, bridge refurb means no fountains + extra pyro) *or* **Cascade of Lights** (Adventure Bay, drone show). Pick one before leaving the hotel Wed evening.
 
 ---
 
 ## Open decisions (game-time)
 - **Phantom Manor** — pre-committed Mon slip → Wed evening if behind
 - **Tower of Terror** — 8yo opt-in only via POV viewing at hotel beforehand; if yes, put LAST in afternoon
-- **Disney Dreams! Wed night** — decide at 21:30 by family state. Walking out is not failure.
+- **Wed nighttime show** — decide at 21:30 by family state. Two options (pick one): *Disney Tales of Magic* (Castle, pyro-heavy due to bridge refurb) or *Cascade of Lights* (Adventure Bay, drone show). Walking out without seeing either is not failure.
 - **Chez Rémy Wed lunch** — book Tue evening or skip
