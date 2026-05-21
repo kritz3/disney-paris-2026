@@ -41,7 +41,7 @@ const PLAN = {
         name: "Evening",
         time: "18:30 – close",
         items: [
-          { time: "~17:30", name: "Disney Stars on Parade", land: "Main St → Fantasyland", score: 3, verify: true, desc: "Daytime parade with a mechanical Maleficent dragon that breathes real fire.", height: null, loc: "outdoor", notes: "VERIFY parade time in app. 15-min duck-in for the dragon. Don't camp." },
+          { time: "~17:30", name: "Disney Stars on Parade", land: "Main St → Fantasyland", score: 3, verify: true, desc: "Daytime parade with a mechanical Maleficent dragon that breathes real fire.", height: null, loc: "outdoor", notes: "VERIFY parade time in app. 15-min duck-in for the dragon. Stand at Hub edge near Discoveryland entrance — decent sightline, easy stroller escape after dragon passes. Don't camp." },
           { time: "19:00", name: "Star Tours", land: "Discoveryland", score: 3, desc: "Indoor flight simulator across Star Wars worlds — multiple variations.", height: 102, loc: "indoor", notes: "Rider Switch" },
           { time: "19:30", name: "Hyperspace Mountain", land: "Discoveryland", score: 3, desc: "Indoor enclosed launched coaster with loops and inversions — intense.", height: 120, loc: "indoor", notes: "Rider Switch — 8yo rides. PA+RS stack candidate." },
           { time: "20:00", name: "Autopia", land: "Discoveryland", score: 3, desc: "Outdoor mini-car circuit — kids drive themselves on a guided track.", height: 132, loc: "outdoor", notes: "8yo drives at 132cm (confirm at gate, passenger fallback pre-loaded). No min height for passenger." },
@@ -90,6 +90,7 @@ const PLAN = {
         time: "19:00 – close",
         sessionNote: "EASY MAGIC — wander, don't chase. Lean into ice cream + Main Street + one reride. Not a throughput session.",
         items: [
+          { time: "19:15", name: "Meet Mickey Mouse", land: "Fantasyland theater", score: 3, desc: "Indoor character meet in Mickey's dedicated theater — themed setting, more reliable queue than open-air meets.", height: null, loc: "indoor", notes: "Memory-anchor meet for the boys. Queue often 30–60 min — evening lower than midday. PA available if it's bad." },
           { time: "19:30", name: "Le Pays des Contes de Fées", land: "Fantasyland", score: 2, desc: "Outdoor canal-boat tour through detailed fairy-tale miniatures.", height: null, loc: "outdoor" },
           { time: "20:00", name: "Casey Jr.", land: "Fantasyland", score: 2, desc: "Mild outdoor circus-train coaster paired with the fairy-tale miniatures.", height: null, loc: "outdoor", notes: "Cute lit at night" },
           { time: "20:25", name: "Pinocchio or Snow White", land: "Fantasyland", score: 2, desc: "Short indoor classic dark rides.", height: null, loc: "indoor", notes: "Whichever skipped Mon" },
@@ -141,7 +142,7 @@ const PLAN = {
           { time: "20:00", name: "Big Thunder Mountain", land: "Frontierland", score: 3, reride: true, desc: "Runaway mine-train coaster.", height: 102, loc: "outdoor", notes: "Full dark — signature reride" },
           { time: "20:40", name: "Pirates of the Caribbean", land: "Adventureland", score: 1, reride: true, desc: "Indoor pirate boat ride.", height: null, loc: "indoor", notes: "Final reride" },
           { time: "21:10", name: "Fantasyland walk-on", land: "Fantasyland", score: 2, desc: "Whatever short Fantasyland classic still has no queue.", height: null, loc: "indoor", notes: "Whatever's short" },
-          { time: "~22:30", name: "Tales of Magic OR Cascade of Lights", land: "Castle / Adventure Bay", score: 3, verify: true, desc: "Pick ONE nighttime show: Castle pyro spectacular, or the new drone show over the lake.", height: null, loc: "outdoor", notes: "VERIFY both showtimes. Tales of Magic = pyro-heavy at Castle (bridge refurb, no fountains). Cascade of Lights = drone show at Adventure Bay. 21:30 family-state check decides — walking out is not failure." }
+          { time: "~22:30", name: "Tales of Magic OR Cascade of Lights", land: "Castle / Adventure Bay", score: 3, verify: true, desc: "Pick ONE nighttime show: Castle pyro spectacular, or the new drone show over the lake.", height: null, loc: "outdoor", notes: "VERIFY both showtimes. 21:30 family-state check decides — walking out is not failure. VIEWING SPOTS: Tales of Magic → Hub edge near Discoveryland (trades some frontal view for stroller-friendly escape; avoids Central Plaza crush). Cascade of Lights → entry-side of Adventure Bay (faster exit toward gates after). The show is 360° around the lake so pick the side closest to your exit." }
         ]
       }
     ]

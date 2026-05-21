@@ -119,7 +119,7 @@ Each ride scored **1–5**. **When falling behind, drop lowest scores first.**
 ### Evening (18:30 – close)
 | Time | Attraction | Land | Score | Notes |
 |---|---|---|---|---|
-| ~17:30⚠️ | Disney Stars on Parade | Main Street → Fantasyland route | 3 | **VERIFY parade time in app — typically 17:30 in late May.** Just 15-min duck-in to catch the **steampunk Maleficent dragon breathing fire** (boys will remember it forever). Stroll up 15 min before to small world / Discoveryland transition, watch, peel off. Don't camp. If parade is at this time, arrive park early instead of normal evening start. |
+| ~17:30⚠️ | Disney Stars on Parade | Main Street → Fantasyland route | 3 | **VERIFY parade time in app — typically 17:30 in late May.** Just 15-min duck-in to catch the **steampunk Maleficent dragon breathing fire** (boys will remember it forever). **Viewing spot:** Hub edge near Discoveryland entrance — decent sightline, easy stroller escape after dragon passes. Don't camp. If parade is at this time, arrive park early instead of normal evening start. |
 | 19:00 | Star Tours | Discoveryland | 3 | Rider Switch |
 | 19:30 | Hyperspace Mountain | Discoveryland | 3 | Rider Switch — 8yo rides. PA+RS stack candidate. |
 | 20:00 | Autopia | Discoveryland | 3 | **8yo drives** (132cm — confirm at gate; passenger fallback pre-loaded) |
@@ -165,6 +165,7 @@ If Frozen is down at 08:30 (new ride, downtime common): **pivot to Anna & Elsa m
 
 | Time | Attraction | Land | Score | Notes |
 |---|---|---|---|---|
+| 19:15 | Meet Mickey Mouse | Fantasyland theater | 3 | Indoor themed meet — more reliable queue than open-air. Memory-anchor for the boys. Queue often 30–60 min, lower in evening. PA available if it's bad. |
 | 19:30 | Le Pays des Contes de Fées | Fantasyland | 2 | |
 | 20:00 | Casey Jr. | Fantasyland | 2 | Cute lit at night |
 | 20:25 | Pinocchio *or* Snow White | Fantasyland | 2 | Whichever skipped Mon |
@@ -210,7 +211,7 @@ If Frozen is down at 08:30 (new ride, downtime common): **pivot to Anna & Elsa m
 | 20:00 | Big Thunder 🔁 | Frontierland | 3 | Full dark — signature reride |
 | 20:40 | Pirates 🔁 | Adventureland | 1 | Final reride |
 | 21:10 | Fantasyland walk-on | Fantasyland | 2 | Whatever's short |
-| ~22:30⚠️ | **Disney Tales of Magic** *or* **Cascade of Lights** | Castle / Adventure Bay | 3 | **VERIFY both show names + times in app.** Pre-committed 21:30 family-state check decides whether to brave a late night. Then choose: *Tales of Magic* (Disneyland Park castle, ~22:30–22:40 — bridge refurb means no fountains but massive extra pyro), or *Cascade of Lights* (Adventure World, aquatic drone fleet skimming the lake — would require being at Adventure World, not Disneyland Park). **You cannot do both** — pick one or walk out gracefully. |
+| ~22:30⚠️ | **Disney Tales of Magic** *or* **Cascade of Lights** | Castle / Adventure Bay | 3 | **VERIFY both show names + times in app.** Pre-committed 21:30 family-state check decides whether to brave a late night. Then choose: *Tales of Magic* (Disneyland Park castle, ~22:30–22:40 — bridge refurb means no fountains but massive extra pyro), or *Cascade of Lights* (Adventure World, aquatic drone fleet skimming the lake). **You cannot do both** — pick one or walk out gracefully. **Viewing spots:** *Tales of Magic* → Hub edge near Discoveryland (trades some frontal view for stroller-friendly escape; avoids Central Plaza crush). *Cascade of Lights* → entry-side of Adventure Bay (360° show — pick side closest to your exit for fast post-show egress toward the gates). |
 
 ---
 
