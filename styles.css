@@ -682,16 +682,79 @@ main {
 }
 
 .all-item-meta {
-  margin-top: 4px;
-  font-size: 12px;
-  color: var(--text-muted);
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.park-pill {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+
+.park-dlp { background: #ece6f7; color: #3c1f6b; }
+.park-daw { background: #ffe0cc; color: #7a3a00; }
+
+.land-mainstreet  { background: #fbd9d9; color: #6b1f1f; }
+.land-frontierland { background: #f0dcb4; color: #5a3a00; }
+.land-adventureland { background: #d4ebc8; color: #2a5a1a; }
+.land-fantasyland { background: #f5d4ea; color: #6b1f5a; }
+.land-discoveryland { background: #d0e0f5; color: #1a3a6b; }
+.land-castle      { background: #f7e6b8; color: #6b4a00; }
+.land-frozen      { background: #d4eef7; color: #1a4a6b; }
+.land-pixar       { background: #ffe89a; color: #6b4a00; }
+.land-avengers    { background: #ffd1d1; color: #8c1d1d; }
+.land-production  { background: #dcd4ea; color: #3c2a6b; }
+.land-adventureway { background: #c8e8d0; color: #1a5a2a; }
+.land-studio      { background: #e0c8f0; color: #4a1a6b; }
+.land-bay         { background: #c8e8e8; color: #1a5a5a; }
+.land-default     { background: var(--bg-alt); color: var(--text-muted); }
+
+@media (prefers-color-scheme: dark) {
+  .park-dlp { background: #2c1f47; color: #d4c2f5; }
+  .park-daw { background: #4a2d10; color: #ffc090; }
+
+  .land-mainstreet  { background: #4a1818; color: #ffb8b8; }
+  .land-frontierland { background: #4a3300; color: #ffd494; }
+  .land-adventureland { background: #1a3d10; color: #b8e6a8; }
+  .land-fantasyland { background: #4a1a3d; color: #ffb8e6; }
+  .land-discoveryland { background: #143666; color: #b8d4f5; }
+  .land-castle      { background: #4a3a00; color: #ffe080; }
+  .land-frozen      { background: #143a4a; color: #b8e0f5; }
+  .land-pixar       { background: #5a4500; color: #ffe080; }
+  .land-avengers    { background: #5c1f1f; color: #ffb8b8; }
+  .land-production  { background: #2c1f47; color: #d4c2f5; }
+  .land-adventureway { background: #1a3a1f; color: #b8e6c0; }
+  .land-studio      { background: #3a1f47; color: #e0c2f5; }
+  .land-bay         { background: #1a3a3a; color: #b8e0e0; }
 }
 
 .all-item-desc {
-  margin-top: 4px;
+  margin-top: 6px;
   font-size: 13px;
   color: var(--text);
   line-height: 1.4;
+}
+
+.all-item-context {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  font-style: italic;
 }
 
 .all-empty {

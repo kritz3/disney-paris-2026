@@ -151,91 +151,92 @@ const PLAN = {
 
 // All attractions across both parks — alphabetical reference.
 // Rating: 0 skip · 1 bonus · 2 lower · 3 standard · 4 high · 5 must.
+// `context` is the strategic note: timing, tactics, family fit, comparisons.
 const ATTRACTIONS = [
   // ---------- DISNEYLAND PARK ----------
   // Main Street
-  { name: "Disneyland Railroad", park: "Disneyland Park", land: "Main Street", height: null, rating: 1, desc: "Steam-train circuit around the park; ~20-min seated semi-shaded break." },
-  { name: "Main Street Vehicles", park: "Disneyland Park", land: "Main Street", height: null, rating: 1, desc: "Vintage cars and trams running up and down Main Street — low-capacity novelty." },
-  { name: "Horse-Drawn Streetcars", park: "Disneyland Park", land: "Main Street", height: null, rating: 0, desc: "Slow open-air streetcar ride; no payoff over walking the arcades in 35°C." },
+  { name: "Disneyland Railroad", park: "Disneyland Park", land: "Main Street", height: null, rating: 1, desc: "Steam-train circuit around the park; ~20-min seated semi-shaded ride.", context: "Use as a long sit-down break, not transport — single direction, slow stops." },
+  { name: "Main Street Vehicles", park: "Disneyland Park", land: "Main Street", height: null, rating: 1, desc: "Vintage cars and trams running up and down Main Street.", context: "Low-capacity novelty. Only if you're at the top of Main Street with time to kill." },
+  { name: "Horse-Drawn Streetcars", park: "Disneyland Park", land: "Main Street", height: null, rating: 0, desc: "Slow open-air horse-drawn streetcar down Main Street.", context: "Skip — open-air in 35°C, no payoff over walking the shaded Liberty/Discovery Arcades." },
 
   // Frontierland
-  { name: "Big Thunder Mountain", park: "Disneyland Park", land: "Frontierland", height: 102, rating: 5, desc: "Runaway mine-train coaster around an island in the lake." },
-  { name: "Phantom Manor", park: "Disneyland Park", land: "Frontierland", height: null, rating: 3, desc: "Indoor haunted-house dark ride in a Western ghost town. 6yo judgment call." },
-  { name: "Thunder Mesa Riverboat", park: "Disneyland Park", land: "Frontierland", height: null, rating: 2, desc: "Slow ~15-min shaded steamboat loop around Big Thunder; refurbished 2026 with new river scenes — solid heat-break." },
-  { name: "Rustler Roundup Shootin' Gallery", park: "Disneyland Park", land: "Frontierland", height: null, rating: 1, desc: "Coin-op shooting gallery (~€2). Not ticket-included. Boys will love it — bring coins." },
-  { name: "Pocahontas Indian Village", park: "Disneyland Park", land: "Frontierland", height: null, rating: 1, desc: "Small outdoor playground with totem poles and rope bridges. Heat-exposed." },
-  { name: "Frontierland Playground", park: "Disneyland Park", land: "Frontierland", height: null, rating: 1, desc: "Outdoor climb-and-run play area. Heat-exposed — cool morning only." },
+  { name: "Big Thunder Mountain", park: "Disneyland Park", land: "Frontierland", height: 102, rating: 5, desc: "Runaway mine-train coaster around an island in the lake.", context: "Both boys ride. Best as sunset reride. PA or Rider Switch if queue ugly Mon morning." },
+  { name: "Phantom Manor", park: "Disneyland Park", land: "Frontierland", height: null, rating: 3, desc: "Indoor haunted-house dark ride in a Western ghost town.", context: "Designated Mon slip → Wed evening fallback. 6yo judgment call on whether it's too dark/scary." },
+  { name: "Thunder Mesa Riverboat", park: "Disneyland Park", land: "Frontierland", height: null, rating: 2, desc: "Slow ~15-min shaded steamboat loop around Big Thunder's island.", context: "Operational gold — heat-break that's also a ride. Refurbed 2026 with new river scenes." },
+  { name: "Rustler Roundup Shootin' Gallery", park: "Disneyland Park", land: "Frontierland", height: null, rating: 1, desc: "Coin-op shooting gallery with electronic targets.", context: "~€2 per game, NOT ticket-included. Boys will love it — bring coins." },
+  { name: "Pocahontas Indian Village", park: "Disneyland Park", land: "Frontierland", height: null, rating: 1, desc: "Small outdoor playground with totem poles and rope bridges.", context: "Cool morning only. Heat-exposed and dead-air." },
+  { name: "Frontierland Playground", park: "Disneyland Park", land: "Frontierland", height: null, rating: 1, desc: "Outdoor climb-and-run play area.", context: "If 6yo needs run-around time. Heat-exposed — skip midday." },
 
   // Adventureland
-  { name: "Pirates of the Caribbean", park: "Disneyland Park", land: "Adventureland", height: null, rating: 5, desc: "Long indoor boat ride through animatronic pirate scenes — the original." },
-  { name: "Indiana Jones", park: "Disneyland Park", land: "Adventureland", height: 140, rating: 2, desc: "Short, intense outdoor coaster with a loop. Adults only — use Single Rider." },
-  { name: "Adventure Isle", park: "Disneyland Park", land: "Adventureland", height: null, rating: 1, desc: "Outdoor island maze of bridges, caves, Skull Rock and Captain Hook's pirate ship. Treasure-hunt overlay added 2025." },
-  { name: "La Cabane des Robinson", park: "Disneyland Park", land: "Adventureland", height: null, rating: 1, desc: "Outdoor giant Swiss Family Robinson treehouse climb. Stair climb in dead air — skip unless cool." },
-  { name: "Le Passage Enchanté d'Aladdin", park: "Disneyland Park", land: "Adventureland", height: null, rating: 1, desc: "Indoor walk-through diorama telling the Aladdin story. Covered and shaded." },
+  { name: "Pirates of the Caribbean", park: "Disneyland Park", land: "Adventureland", height: null, rating: 5, desc: "Long indoor boat ride through animatronic pirate scenes — the original.", context: "Whole family. Great indoor heat refuge — 12-min cool-down built in. Plan as midday anchor." },
+  { name: "Indiana Jones et le Temple du Péril", park: "Disneyland Park", land: "Adventureland", height: 140, rating: 2, desc: "Short, intense outdoor coaster with a loop.", context: "Adults-only at 140cm. Use SINGLE RIDER line, not Rider Switch — ~15 min solo-with-3-kids per shift. Bonus, drop without guilt." },
+  { name: "Adventure Isle", park: "Disneyland Park", land: "Adventureland", height: null, rating: 1, desc: "Outdoor island maze of bridges, caves, Skull Rock and Captain Hook's pirate ship.", context: "Treasure-hunt overlay added 2025 — pick up map at entrance. Cool morning only in 35°C." },
+  { name: "La Cabane des Robinson", park: "Disneyland Park", land: "Adventureland", height: null, rating: 1, desc: "Outdoor giant Swiss Family Robinson treehouse climb.", context: "Stair climb in dead air. Skip unless cool — meltdown risk midday." },
+  { name: "Le Passage Enchanté d'Aladdin", park: "Disneyland Park", land: "Adventureland", height: null, rating: 1, desc: "Indoor walk-through diorama telling the Aladdin story.", context: "Covered + shaded. 5-min filler if walking past — better heat refuge than Cabane des Robinson." },
 
   // Fantasyland
-  { name: "Peter Pan's Flight", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 5, desc: "Suspended dark ride soaring over London and Neverland." },
-  { name: "Mickey's PhilharMagic", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 5, desc: "Indoor 4D animated film with Donald Duck — strong A/C, ~12 min." },
-  { name: "Meet Mickey Mouse", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 3, desc: "Indoor character meet in Mickey's dedicated theater — themed setting, more reliable than open-air meets." },
-  { name: "Dumbo the Flying Elephant", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 3, desc: "Classic spinning elephant ride — kids control the height." },
-  { name: "It's a small world", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 3, desc: "Indoor boat ride through animatronic global children — A/C, calming, high capacity." },
-  { name: "Pinocchio's Daring Journey", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 2, desc: "Short indoor classic dark ride." },
-  { name: "Snow White's Scary Adventures", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 2, desc: "Short indoor classic dark ride." },
-  { name: "Le Pays des Contes de Fées", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 2, desc: "Outdoor canal-boat tour through detailed fairy-tale miniatures." },
-  { name: "Casey Jr. - Le Petit Train du Cirque", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 2, desc: "Mild outdoor circus-train coaster paired with the fairy-tale miniatures. Cute lit at night." },
-  { name: "Sleeping Beauty Castle walkthrough", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Self-paced walk through the Castle interior with the Dragon's Lair animatronic in the basement." },
-  { name: "Sleeping Beauty's Gallery", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Indoor walk-through on the castle's 2nd floor — stained-glass + tapestries telling the Sleeping Beauty story (~10 min)." },
-  { name: "Alice's Curious Labyrinth", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Outdoor topiary maze leading up to the Queen of Hearts' castle. Claimed closed 5 May – 2 Jul; concrete heat trap regardless." },
-  { name: "Mad Hatter's Tea Cups", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Outdoor spinning tea-cup ride. Nausea risk in heat — cool morning only." },
-  { name: "Le Carrousel de Lancelot", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Classic outdoor carousel with Arthurian theming." },
-  { name: "Princess Pavilion", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 0, desc: "2hr+ standby for a single princess meet — never worth it." },
+  { name: "Peter Pan's Flight", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 5, desc: "Suspended dark ride soaring over London and Neverland.", context: "EMT priority — FIRST ride of trip Mon 08:30. Queue gets brutal by 09:30. Skip standby once it hits 45min — PA it instead." },
+  { name: "Mickey's PhilharMagic", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 5, desc: "Indoor 4D animated film with Donald Duck — strong A/C, ~12 min.", context: "Strongest A/C anchor in Fantasyland. Slot post-lunch to reset before afternoon heat." },
+  { name: "Meet Mickey Mouse", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 3, desc: "Indoor character meet in Mickey's dedicated theater.", context: "Memory-anchor for the boys. Queue often 30–60 min — try evening (lower) over midday. PA available." },
+  { name: "Dumbo the Flying Elephant", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 3, desc: "Classic spinning elephant ride — kids control the height.", context: "Both boys still love this format. Similar to Orbitron and Flying Carpets — do this one, skip those." },
+  { name: "It's a small world", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 3, desc: "Indoor boat ride through animatronic global children.", context: "A/C, high capacity, calming. Perfect between two thrills — use as cool-down." },
+  { name: "Pinocchio's Daring Journey", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 2, desc: "Short indoor classic dark ride.", context: "Pair with Snow White — pick whichever has the shorter queue. Both essentially interchangeable." },
+  { name: "Snow White's Scary Adventures", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 2, desc: "Short indoor classic dark ride.", context: "Pair with Pinocchio — pick whichever has the shorter queue. Slightly darker/scarier for the 6yo." },
+  { name: "Le Pays des Contes de Fées", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 2, desc: "Outdoor canal-boat tour through detailed fairy-tale miniatures.", context: "Pair with Casey Jr. — same area. Cuter at dusk than midday." },
+  { name: "Casey Jr. - Le Petit Train du Cirque", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 2, desc: "Mild outdoor circus-train coaster paired with the fairy-tale miniatures.", context: "Pair with Le Pays des Contes — same area. Cute lit at night, best as evening filler." },
+  { name: "Sleeping Beauty Castle walkthrough", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Self-paced walk through the Castle interior + the Dragon's Lair animatronic in the basement.", context: "5-min loop. Combine with Sleeping Beauty's Gallery (same building, 2nd floor) for a single 10-min castle visit." },
+  { name: "Sleeping Beauty's Gallery", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Indoor walk-through on the castle's 2nd floor — stained-glass + tapestries telling the Sleeping Beauty story.", context: "Fold into the Castle walkthrough stop — same building. A/C, ~10 min, low-effort." },
+  { name: "Alice's Curious Labyrinth", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Outdoor topiary maze leading up to the Queen of Hearts' castle.", context: "Claimed CLOSED 5 May – 2 Jul 2026 — verify in app. Concrete heat trap even if open." },
+  { name: "Mad Hatter's Tea Cups", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Outdoor spinning tea-cup ride.", context: "Cool morning only — nausea risk in heat. Skip if you've already done Dumbo or any spinner." },
+  { name: "Le Carrousel de Lancelot", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 1, desc: "Classic outdoor carousel with Arthurian theming.", context: "Both boys may feel too old. Only if baby's happy + 6yo specifically asks." },
+  { name: "Princess Pavilion", park: "Disneyland Park", land: "Fantasyland", height: null, rating: 0, desc: "Standby-only princess meet-and-greet in a themed pavilion.", context: "Skip — 2hr+ standby for a single meet. If princesses are a must, book Auberge de Cendrillon dining instead." },
 
   // Discoveryland
-  { name: "Star Tours – The Adventure Continues", park: "Disneyland Park", land: "Discoveryland", height: 102, rating: 3, desc: "Indoor flight simulator across Star Wars worlds — multiple randomized variations." },
-  { name: "Hyperspace Mountain", park: "Disneyland Park", land: "Discoveryland", height: 120, rating: 3, desc: "Indoor enclosed launched coaster with loops and inversions — intense." },
-  { name: "Buzz Lightyear Laser Blast", park: "Disneyland Park", land: "Discoveryland", height: null, rating: 3, desc: "Indoor interactive shooting dark ride — compete on score." },
-  { name: "Autopia", park: "Disneyland Park", land: "Discoveryland", height: 132, rating: 3, desc: "Outdoor mini-car circuit — kids drive themselves on a guided track. 8yo borderline at 132cm; no minimum for passenger." },
-  { name: "Les Mystères du Nautilus", park: "Disneyland Park", land: "Discoveryland", height: null, rating: 1, desc: "Indoor walkthrough of Captain Nemo's submarine; freshly refurbished 2023. Brief cool-down — claustrophobic, bail if baby fusses." },
-  { name: "Orbitron", park: "Disneyland Park", land: "Discoveryland", height: null, rating: 1, desc: "Da Vinci–themed outdoor spinner above Discoveryland. Dumbo already covers this format." },
+  { name: "Star Tours – The Adventure Continues", park: "Disneyland Park", land: "Discoveryland", height: 102, rating: 3, desc: "Indoor flight simulator across Star Wars worlds — 60 randomized mission variations.", context: "Both boys ride. Rider Switch. Skip if you've ridden recently — variation rarely lands a new combo in one trip." },
+  { name: "Hyperspace Mountain", park: "Disneyland Park", land: "Discoveryland", height: 120, rating: 3, desc: "Indoor enclosed launched coaster with loops and inversions — intense.", context: "8yo only. Rider Switch — 8yo gets to ride twice if he wants. PA+RS stack candidate if queue ugly." },
+  { name: "Buzz Lightyear Laser Blast", park: "Disneyland Park", land: "Discoveryland", height: null, rating: 3, desc: "Indoor interactive shooting dark ride — compete on score.", context: "Whole family. A/C. Similar to Spider-Man W.E.B. but easier and less physical — kids enjoy both." },
+  { name: "Autopia", park: "Disneyland Park", land: "Discoveryland", height: 132, rating: 3, desc: "Outdoor mini-car circuit — kids drive themselves on a guided track.", context: "8yo BORDERLINE at 132cm — confirm at gate. Pre-load passenger fallback so a 'no' isn't a meltdown. No min height for passenger." },
+  { name: "Les Mystères du Nautilus", park: "Disneyland Park", land: "Discoveryland", height: null, rating: 1, desc: "Indoor walkthrough of Captain Nemo's submarine; refurbed 2023 with new effects in the Grand Salon.", context: "Brief cool-down + photo op. Potentially claustrophobic — bail if baby fusses. ~5-10 min." },
+  { name: "Orbitron", park: "Disneyland Park", land: "Discoveryland", height: null, rating: 1, desc: "Da Vinci–themed outdoor spinner above Discoveryland.", context: "Same format as Dumbo — skip if you've done Dumbo. Only if Hyperspace queue is moving slowly." },
 
   // Shows & parades (DLP)
-  { name: "Disney Stars on Parade", park: "Disneyland Park", land: "Main Street → Fantasyland", height: null, rating: 3, desc: "Daytime parade with a mechanical Maleficent dragon that breathes real fire — typically ~17:30." },
-  { name: "Disney Tales of Magic", park: "Disneyland Park", land: "Castle", height: null, rating: 3, desc: "Castle nighttime spectacular — pyro-heavy (no fountains during bridge refurb). ~22:30–22:40." },
+  { name: "Disney Stars on Parade", park: "Disneyland Park", land: "Main Street", height: null, rating: 3, desc: "Daytime parade with a mechanical Maleficent dragon that breathes real fire.", context: "VERIFY time in app (typically ~17:30). 15-min duck-in for the dragon only — don't camp. View from Hub edge near Discoveryland for easy stroller escape." },
+  { name: "Disney Tales of Magic", park: "Disneyland Park", land: "Castle", height: null, rating: 3, desc: "Castle nighttime spectacular — pyro-heavy (no fountains during bridge refurb). ~22:30–22:40.", context: "Late night — 21:30 family-state check first. Pick this OR Cascade of Lights, not both. View from Hub edge near Discoveryland (avoids Central Plaza crush)." },
 
   // ---------- DISNEY ADVENTURE WORLD ----------
   // World of Frozen
-  { name: "Frozen Ever After", park: "Disney Adventure World", land: "World of Frozen", height: null, rating: 5, desc: "Indoor boat ride through Arendelle with full Frozen animatronics — the new marquee ride." },
-  { name: "A Celebration in Arendelle", park: "Disney Adventure World", land: "World of Frozen", height: null, rating: 4, desc: "Outdoor daytime show on Arendelle Bay with a life-size robotic Olaf and Frozen songs (~15 min, multiple showings)." },
-  { name: "Anna & Elsa meet", park: "Disney Adventure World", land: "World of Frozen", height: null, rating: 2, desc: "Indoor character meet-and-greet with the Frozen sisters." },
+  { name: "Frozen Ever After", park: "Disney Adventure World", land: "World of Frozen", height: null, rating: 5, desc: "Indoor boat ride through Arendelle with full Frozen animatronics — the new marquee ride.", context: "EMT priority — straight to back of park at 08:30. New ride = downtime common. If down: PA when reopens, ride A&E meet + Crush first." },
+  { name: "A Celebration in Arendelle", park: "Disney Adventure World", land: "World of Frozen", height: null, rating: 4, desc: "Outdoor daytime show on Arendelle Bay with a life-size robotic Olaf and Frozen songs (~15 min).", context: "Multiple showings/day — check app. Best slotted Tue ~09:00 right after Frozen Ever After. Heat-exposed but the 6yo will demand it." },
+  { name: "Anna & Elsa meet", park: "Disney Adventure World", land: "World of Frozen", height: null, rating: 2, desc: "Indoor character meet-and-greet with the Frozen sisters.", context: "Conditional on queue — fall back here Tue 09:00 if Frozen Ever After is down at rope drop." },
 
   // Worlds of Pixar
-  { name: "Crush's Coaster", park: "Disney Adventure World", land: "Worlds of Pixar", height: 107, rating: 5, desc: "Indoor spinning coaster through the Great Barrier Reef — Finding Nemo theme. Single Rider not always open." },
-  { name: "Ratatouille: The Adventure", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 4, desc: "Indoor trackless 3D ride — you're rat-sized through Gusteau's restaurant." },
-  { name: "Toy Soldiers Parachute Drop", park: "Disney Adventure World", land: "Worlds of Pixar", height: 81, rating: 3, desc: "Mini drop tower with rope-pull launch — kid-scale thrill. Claimed closed 25–30 May — verify in app." },
-  { name: "Cars Road Trip", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 2, desc: "Outdoor scenic tram tour through Cars-themed Route 66 landscapes." },
-  { name: "Cars Quatre Roues Rallye", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 2, desc: "Outdoor spinning ride — junkyard-style cars on a circular track." },
-  { name: "Slinky Dog Zigzag Spin", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 2, desc: "Outdoor family coaster shaped like Slinky Dog from Toy Story." },
-  { name: "RC Racer", park: "Disney Adventure World", land: "Worlds of Pixar", height: 120, rating: 2, desc: "U-shaped half-pipe coaster — swings up the sides of a giant ramp. 8yo only." },
-  { name: "Flying Carpets over Agrabah", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 1, desc: "Standard Aladdin-themed outdoor spinner." },
+  { name: "Crush's Coaster", park: "Disney Adventure World", land: "Worlds of Pixar", height: 107, rating: 5, desc: "Indoor spinning coaster through the Great Barrier Reef — Finding Nemo theme.", context: "BIGGEST queue pressure of the trip. Buy PA at 09:25 Tue — do NOT standby. Single Rider not always open. Both boys ride." },
+  { name: "Ratatouille: The Adventure", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 4, desc: "Indoor trackless 3D ride — you're rat-sized through Gusteau's restaurant.", context: "Whole family. Trackless = every ride is slightly different. A/C. Refurbed spring 2026 with new queue scene." },
+  { name: "Toy Soldiers Parachute Drop", park: "Disney Adventure World", land: "Worlds of Pixar", height: 81, rating: 3, desc: "Mini drop tower with rope-pull launch — kid-scale thrill.", context: "Claimed CLOSED 25–30 May 2026 — verify in app night-before. Lowest height threshold on any thrill (81cm), so both boys ride if open." },
+  { name: "Cars Road Trip", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 2, desc: "Outdoor scenic tram tour through Cars-themed Route 66 landscapes.", context: "Verify refurb status — has been on/off. Mild + scenic; fine A/C-adjacent sit-down." },
+  { name: "Cars Quatre Roues Rallye", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 2, desc: "Outdoor spinning ride — junkyard-style cars on a circular track.", context: "Mild spinner — easier than Crush's. Both boys ride." },
+  { name: "Slinky Dog Zigzag Spin", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 2, desc: "Outdoor family coaster shaped like Slinky Dog from Toy Story.", context: "Both boys ride. Tame coaster — good warm-up for the 6yo before he sees brothers do RC Racer." },
+  { name: "RC Racer", park: "Disney Adventure World", land: "Worlds of Pixar", height: 120, rating: 2, desc: "U-shaped half-pipe coaster — swings up the sides of a giant ramp.", context: "8yo only. Rider Switch — 8yo can ride twice. PA+RS stack candidate. Short ride, often long queue." },
+  { name: "Flying Carpets over Agrabah", park: "Disney Adventure World", land: "Worlds of Pixar", height: null, rating: 1, desc: "Standard Aladdin-themed outdoor spinner.", context: "Same format as Dumbo/Orbitron. Skip unless Tue morning is flowing well." },
 
   // Avengers Campus
-  { name: "Spider-Man W.E.B. Adventure", park: "Disney Adventure World", land: "Avengers Campus", height: null, rating: 5, desc: "Indoor interactive 3D ride — vigorous arm-flailing to 'shoot' webs. Physical workout for arms." },
-  { name: "Avengers Flight Force", park: "Disney Adventure World", land: "Avengers Campus", height: 120, rating: 4, desc: "Indoor launched coaster with inversions — Iron Man + Captain Marvel theme." },
-  { name: "Avengers Campus stunt shows & roaming meets", park: "Disney Adventure World", land: "Avengers Campus", height: null, rating: 1, desc: "Periodic outdoor stunt sequences and roaming Marvel hero meets throughout the day — zero-queue, check app times." },
-  { name: "Hero Training Center", park: "Disney Adventure World", land: "Avengers Campus", height: null, rating: 0, desc: "Marvel hero meet via app virtual queue. VQ overhead too high unless boys are Marvel-obsessed." },
+  { name: "Spider-Man W.E.B. Adventure", park: "Disney Adventure World", land: "Avengers Campus", height: null, rating: 5, desc: "Indoor interactive 3D ride — vigorous arm-flailing to 'shoot' webs.", context: "Whole family. PHYSICAL — arm workout. Low-capacity ride — if standby >45 min Tue afternoon, PA IMMEDIATELY (jumps to top of PA list)." },
+  { name: "Avengers Flight Force", park: "Disney Adventure World", land: "Avengers Campus", height: 120, rating: 4, desc: "Indoor launched coaster with inversions — Iron Man + Captain Marvel theme.", context: "8yo only. PA+RS stack candidate — buy 1 PA for Parent A, grab RS pass at unload, Parent B uses RS lane. Cuts ~40 min off back-to-back with ToT." },
+  { name: "Avengers Campus stunt shows & roaming meets", park: "Disney Adventure World", land: "Avengers Campus", height: null, rating: 1, desc: "Periodic outdoor stunt sequences + roaming Marvel hero meets (Black Panther, Thor, Black Widow, Loki).", context: "Zero-queue ambient. Catch in passing — don't camp in 35°C sun. Check app for stunt show times." },
+  { name: "Hero Training Center", park: "Disney Adventure World", land: "Avengers Campus", height: null, rating: 0, desc: "Marvel hero meet (Spider-Man / Captain Marvel / others) via app virtual queue.", context: "Skip — virtual queue overhead too high unless boys are deeply Marvel-obsessed. Use the time on rides instead." },
 
   // Production Courtyard
-  { name: "The Twilight Zone Tower of Terror", park: "Disney Adventure World", land: "Production Courtyard", height: 102, rating: 2, desc: "Indoor multi-drop tower — themed elevator plunge through The Twilight Zone. 8yo opt-in only after watching POV at hotel." },
-  { name: "Mickey and the Magician", park: "Disney Adventure World", land: "Production Courtyard", height: null, rating: 5, desc: "Indoor 30-min live stage show — Mickey as Yen Sid's apprentice. A/C anchor." },
-  { name: "Stitch Live!", park: "Disney Adventure World", land: "Production Courtyard", height: null, rating: 0, desc: "Virtual queue friction + technical glitches common — high overhead for one short show." },
-  { name: "Minnie's Dream Factory", park: "Disney Adventure World", land: "World Premiere Plaza", height: null, rating: 0, desc: "Musical show with Minnie, Donald, Daisy, Chip 'n Dale (replaced Disney Junior Dream Factory Feb 2026). Designed for under-5s." },
+  { name: "The Twilight Zone Tower of Terror", park: "Disney Adventure World", land: "Production Courtyard", height: 102, rating: 2, desc: "Indoor multi-drop tower — themed elevator plunge through The Twilight Zone.", context: "8yo opt-in ONLY after watching POV at hotel beforehand. Slot LAST in Tue afternoon session — if 8yo says no, drop without guilt." },
+  { name: "Mickey and the Magician", park: "Disney Adventure World", land: "Production Courtyard", height: null, rating: 5, desc: "Indoor 30-min live stage show — Mickey as Yen Sid's apprentice.", context: "A/C anchor for Wed 11:10. ~45 min total including queue. Confirmed running in May; on extended break 15 Jun – 31 Jul." },
+  { name: "Stitch Live!", park: "Disney Adventure World", land: "Production Courtyard", height: null, rating: 0, desc: "Interactive live show with the Stitch character via real-time animation.", context: "Skip — virtual queue + technical glitches common. Short payoff for high overhead." },
+  { name: "Minnie's Dream Factory", park: "Disney Adventure World", land: "World Premiere Plaza", height: null, rating: 0, desc: "Musical show with Minnie, Donald, Daisy, Chip 'n Dale (replaced Disney Junior Dream Factory Feb 2026).", context: "Skip — designed for under-5s. 8yo will check out. 6yo borderline but rides win." },
 
   // Adventure Way
-  { name: "Raiponce Tangled Spin", park: "Disney Adventure World", land: "Adventure Way", height: null, rating: 2, desc: "Outdoor spinning swing ride with Rapunzel theming." },
+  { name: "Raiponce Tangled Spin", park: "Disney Adventure World", land: "Adventure Way", height: null, rating: 2, desc: "Outdoor spinning swing ride with Rapunzel theming.", context: "Mild outdoor swing. New land for 2026 — quieter than Pixar side most mornings." },
 
   // Shows (DAW)
-  { name: "TOGETHER: a Pixar Musical", park: "Disney Adventure World", land: "Studio Theater", height: null, rating: 4, desc: "Indoor live stage show — 12-piece orchestra performing Pixar music across films (~35 min, A/C)." },
-  { name: "Cascade of Lights", park: "Disney Adventure World", land: "Adventure Bay", height: null, rating: 3, desc: "Aquatic drone-fleet nighttime show over the lake — 360° around Adventure Bay." }
+  { name: "TOGETHER: a Pixar Musical", park: "Disney Adventure World", land: "Studio Theater", height: null, rating: 4, desc: "Indoor live stage show — 12-piece orchestra performing Pixar music across films (~35 min, A/C).", context: "VERIFY showtime in app. Strong heat refuge + 'best show in the park' reputation. Only do Wed if you're not too tired — energy check." },
+  { name: "Cascade of Lights", park: "Disney Adventure World", land: "Adventure Bay", height: null, rating: 3, desc: "Aquatic drone-fleet nighttime show over the lake — 360° around Adventure Bay.", context: "Late night — 21:30 family-state check first. Pick this OR Tales of Magic, not both. View from entry-side of Adventure Bay for fast exit toward gates." }
 ];
 
 const SHOWS_LOG = {
@@ -526,6 +527,29 @@ function attractionSortKey(name) {
   return name.toLowerCase().replace(/^(le |la |les |l'|the )/, "");
 }
 
+// Map land name → CSS class. Themed colors per Disney "land".
+const LAND_CLASS = {
+  "Main Street": "land-mainstreet",
+  "Frontierland": "land-frontierland",
+  "Adventureland": "land-adventureland",
+  "Fantasyland": "land-fantasyland",
+  "Discoveryland": "land-discoveryland",
+  "Castle": "land-castle",
+  "World of Frozen": "land-frozen",
+  "Worlds of Pixar": "land-pixar",
+  "Avengers Campus": "land-avengers",
+  "Production Courtyard": "land-production",
+  "World Premiere Plaza": "land-production",
+  "Adventure Way": "land-adventureway",
+  "Studio Theater": "land-studio",
+  "Adventure Bay": "land-bay"
+};
+
+const PARK_SHORT = {
+  "Disneyland Park": { label: "DLP", className: "park-dlp" },
+  "Disney Adventure World": { label: "DAW", className: "park-daw" }
+};
+
 function renderAll() {
   const container = document.getElementById("all-content");
   container.innerHTML = "";
@@ -578,9 +602,21 @@ function renderAll() {
         top.append(el("span", { class: "badge badge-height", title: `Min height ${a.height}cm` }, `${a.height}cm`));
       }
       li.append(top);
-      li.append(el("div", { class: "all-item-meta" }, `${a.park} · ${a.land}`));
+
+      const meta = el("div", { class: "all-item-meta" });
+      const park = PARK_SHORT[a.park];
+      if (park) {
+        meta.append(el("span", { class: `pill park-pill ${park.className}`, title: a.park }, park.label));
+      }
+      const landClass = LAND_CLASS[a.land] || "land-default";
+      meta.append(el("span", { class: `pill land-pill ${landClass}` }, a.land));
+      li.append(meta);
+
       if (a.desc) {
         li.append(el("div", { class: "all-item-desc" }, a.desc));
+      }
+      if (a.context) {
+        li.append(el("div", { class: "all-item-context" }, a.context));
       }
       listEl.append(li);
     }
