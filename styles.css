@@ -360,6 +360,11 @@ main {
 .chip-3 { background: var(--score-3-bg); color: var(--score-3-text); }
 .chip-2 { background: var(--score-2-bg); color: var(--score-2-text); }
 .chip-1 { background: var(--score-1-bg); color: var(--score-1-text); }
+.chip-0 {
+  background: var(--bg-alt);
+  color: var(--text-faint);
+  border: 1px dashed var(--border-strong);
+}
 .chip-logistics { background: var(--score-logistics-bg); color: var(--score-logistics-text); }
 
 .tag {
@@ -614,6 +619,86 @@ main {
   margin: 0 0 4px;
   font-size: 14px;
   color: var(--accent);
+}
+
+/* ===== All attractions tab ===== */
+
+.all-legend {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  padding: 0 2px;
+}
+
+.all-search {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+  margin-bottom: 12px;
+  min-height: 44px;
+}
+
+.all-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  padding: 0 2px;
+}
+
+.all-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.all-item {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.all-item:last-child { border-bottom: none; }
+
+.all-item-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.all-item-name {
+  font-weight: 500;
+  font-size: 15px;
+  flex: 1;
+  min-width: 0;
+}
+
+.all-item-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.all-item-desc {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.all-empty {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-muted);
+  font-size: 14px;
 }
 
 /* ===== Show times log ===== */
