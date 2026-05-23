@@ -742,6 +742,31 @@ main {
   .land-bay         { background: #1a3a3a; color: #b8e0e0; }
 }
 
+.all-item-slots {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.slot-pill {
+  font-size: 11px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.slot-pill.is-reride { opacity: 0.7; }
+
+.day-mon { background: #d4e8d4; color: #1a5a2a; }
+.day-tue { background: #d4d8f0; color: #2a2a6b; }
+.day-wed { background: #f0d8d4; color: #6b2a1a; }
+
+@media (prefers-color-scheme: dark) {
+  .day-mon { background: #1a4020; color: #b8e6c0; }
+  .day-tue { background: #1a2050; color: #c2c8f0; }
+  .day-wed { background: #4a1a10; color: #ffb8a8; }
+}
+
 .all-item-desc {
   margin-top: 6px;
   font-size: 13px;

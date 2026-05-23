@@ -550,6 +550,55 @@ const PARK_SHORT = {
   "Disney Adventure World": { label: "DAW", className: "park-daw" }
 };
 
+// Plan-item-name → ATTRACTIONS canonical name. For names that diverge.
+const PLAN_NAME_ALIASES = {
+  "Dumbo": "Dumbo the Flying Elephant",
+  "Indiana Jones": "Indiana Jones et le Temple du Péril",
+  "Buzz Lightyear": "Buzz Lightyear Laser Blast",
+  "Star Tours": "Star Tours – The Adventure Continues",
+  "Castle walkthrough + Dragon's Lair": "Sleeping Beauty Castle walkthrough",
+  "Ratatouille": "Ratatouille: The Adventure",
+  "Tower of Terror": "The Twilight Zone Tower of Terror",
+  "Casey Jr.": "Casey Jr. - Le Petit Train du Cirque",
+  "Mickey's PhilharMagic or early hotel": "Mickey's PhilharMagic"
+};
+
+// Some plan items map to two attractions (decide-on-day OR'd entries).
+function planItemAttractionNames(planItemName) {
+  if (planItemName === "Pinocchio or Snow White") {
+    return ["Pinocchio's Daring Journey", "Snow White's Scary Adventures"];
+  }
+  if (planItemName.startsWith("Tales of Magic")) {
+    return ["Disney Tales of Magic", "Cascade of Lights"];
+  }
+  return [PLAN_NAME_ALIASES[planItemName] || planItemName];
+}
+
+// Index: attraction name → [{ dayLabel, dayKey, time, isReride }]
+function buildPlanIndex() {
+  const index = {};
+  for (const dayKey of ["mon", "tue", "wed"]) {
+    const day = PLAN[dayKey];
+    for (const session of day.sessions) {
+      for (const item of session.items) {
+        if (item.score === 0) continue; // logistics
+        for (const name of planItemAttractionNames(item.name)) {
+          if (!index[name]) index[name] = [];
+          index[name].push({
+            dayLabel: day.label.slice(0, 3),
+            dayKey,
+            time: item.time,
+            isReride: !!item.reride
+          });
+        }
+      }
+    }
+  }
+  return index;
+}
+
+const PLAN_INDEX = buildPlanIndex();
+
 function renderAll() {
   const container = document.getElementById("all-content");
   container.innerHTML = "";
@@ -611,6 +660,18 @@ function renderAll() {
       const landClass = LAND_CLASS[a.land] || "land-default";
       meta.append(el("span", { class: `pill land-pill ${landClass}` }, a.land));
       li.append(meta);
+
+      const planSlots = PLAN_INDEX[a.name];
+      if (planSlots && planSlots.length) {
+        const slotsRow = el("div", { class: "all-item-slots" });
+        for (const slot of planSlots) {
+          slotsRow.append(el("span", {
+            class: `pill slot-pill day-${slot.dayKey}` + (slot.isReride ? " is-reride" : ""),
+            title: slot.isReride ? "Reride" : "Scheduled"
+          }, `${slot.dayLabel} ${slot.time}${slot.isReride ? " 🔁" : ""}`));
+        }
+        li.append(slotsRow);
+      }
 
       if (a.desc) {
         li.append(el("div", { class: "all-item-desc" }, a.desc));
