@@ -30,11 +30,12 @@ const PLAN = {
       },
       {
         name: "Early afternoon",
-        time: "13:00 – 14:15",
+        time: "12:55 – 15:00",
         items: [
-          { time: "13:00", name: "Mickey's PhilharMagic", land: "Fantasyland", score: 5, desc: "Indoor 4D animated film with Donald Duck — strong A/C, ~12 min.", height: null, loc: "indoor", notes: "A/C anchor" },
-          { time: "13:35", name: "Buzz Lightyear", land: "Discoveryland", score: 3, desc: "Indoor interactive shooting dark ride — compete on score.", height: null, loc: "indoor" },
-          { time: "14:15", name: "Shuttle to hotel", land: "—", score: 0, notes: "Take the free shuttle, not the walk" }
+          { time: "12:55", name: "Mickey's PhilharMagic", land: "Fantasyland", score: 5, desc: "Indoor 4D animated film with Donald Duck — strong A/C, ~12 min.", height: null, loc: "indoor", notes: "A/C anchor — catch the 12:50/13:00 showing, out by ~13:20" },
+          { time: "13:30", name: "Lion King: Rhythms of the Pride Lands", land: "Frontierland — Chaparral Theater", score: 5, verify: true, desc: "Indoor 30-min live stage show — Lion King songs, acrobatics, drumming. Top-tier reputation.", height: null, loc: "indoor", notes: "VERIFY showtime in app (typical 11:00 / 13:30 / 15:30). User-verified OPEN contra earlier closure notice. Walk Fantasyland → Chaparral ~7 min; seat 10 min early. If only post-15:30 showtime: swap to Wed afternoon (displaces Robinson/Aladdin/Labyrinth)." },
+          { time: "14:30", name: "Buzz Lightyear", land: "Discoveryland", score: 3, desc: "Indoor interactive shooting dark ride — compete on score.", height: null, loc: "indoor", notes: "Walk Frontierland → Discoveryland ~10 min" },
+          { time: "15:00", name: "Shuttle to hotel", land: "—", score: 0, notes: "Midday break shortened ~45 min — accept it; two A/C shows + Buzz all heat-friendly" }
         ]
       },
       {
@@ -166,6 +167,7 @@ const ATTRACTIONS = [
   { name: "Rustler Roundup Shootin' Gallery", park: "Disneyland Park", land: "Frontierland", height: null, rating: 1, desc: "Coin-op shooting gallery with electronic targets.", context: "~€2 per game, NOT ticket-included. Boys will love it — bring coins." },
   { name: "Pocahontas Indian Village", park: "Disneyland Park", land: "Frontierland", height: null, rating: 1, desc: "Small outdoor playground with totem poles and rope bridges.", context: "Cool morning only. Heat-exposed and dead-air." },
   { name: "Frontierland Playground", park: "Disneyland Park", land: "Frontierland", height: null, rating: 1, desc: "Outdoor climb-and-run play area.", context: "If 6yo needs run-around time. Heat-exposed — skip midday." },
+  { name: "Lion King: Rhythms of the Pride Lands", park: "Disneyland Park", land: "Frontierland — Chaparral Theater", height: null, rating: 5, desc: "Indoor 30-min live stage show — Lion King songs, acrobatics, African drumming.", context: "User-verified OPEN contra earlier closure notice. Slot Mon 13:30 — peak-heat A/C anchor. Verify showtimes in app (typical 11:00 / 13:30 / 15:30). Boys are exactly the right age — both will remember this." },
 
   // Adventureland
   { name: "Pirates of the Caribbean", park: "Disneyland Park", land: "Adventureland", height: null, rating: 5, desc: "Long indoor boat ride through animatronic pirate scenes — the original.", context: "Whole family. Great indoor heat refuge — 12-min cool-down built in. Plan as midday anchor." },
@@ -241,6 +243,7 @@ const ATTRACTIONS = [
 
 const SHOWS_LOG = {
   mon: [
+    { id: "mon-lion-king", name: "Lion King: Rhythms of the Pride Lands", typical: "~13:30", note: "Chaparral Theater — 30 min A/C show" },
     { id: "mon-parade", name: "Disney Stars on Parade", typical: "~17:30", note: "Maleficent dragon — 15-min duck-in" }
   ],
   tue: [],
@@ -265,6 +268,7 @@ const NIGHT_BEFORE = {
     { id: "nb-mon-emt", text: "Confirm EMT opening Disneyland Park" },
     { id: "nb-mon-weather", text: "Check weather forecast" },
     { id: "nb-mon-parade", text: "Verify Disney Stars on Parade time" },
+    { id: "nb-mon-lion-king", text: "Verify Lion King showtimes (target 13:30; fallback 11:00 / 15:30)" },
     { id: "nb-mon-refurbs", text: "Check refurbishment list (Pirates)" }
   ],
   tue: [
