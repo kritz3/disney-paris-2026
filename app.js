@@ -9,6 +9,52 @@
 //   loc ("indoor" | "outdoor" | "mixed" | null),
 //   reride, slip, verify, notes (extra context)
 
+// High-level overall plan — anchors only, no ride-by-ride scheduling.
+const OVERVIEW = {
+  principles: [
+    "One direction per session — no zig-zag across the park.",
+    "EMT (the extra hour) goes to the most queue-sensitive ride of the day.",
+    "Anchors only. See how it goes. Take it as it comes.",
+    "Family state > ride throughput."
+  ],
+  days: [
+    {
+      key: "mon",
+      label: "Monday",
+      date: "May 25",
+      park: "Disneyland Park",
+      sessions: [
+        { time: "Morning — EMT 08:30", text: "Peter Pan first (EMT walk-on). Then Pirates → work through Adventureland and Frontierland (Big Thunder, Phantom Manor, Indy). One direction — don't cross back for small world." },
+        { time: "Midday", text: "Hotel break: lunch, A/C, baby nap." },
+        { time: "Evening", text: "Back in DLP — finish whatever's left. Anchor: catch the parade dragon (~17:30, 15-min duck-in). Stop when the family fades." }
+      ]
+    },
+    {
+      key: "tue",
+      label: "Tuesday",
+      date: "May 26",
+      park: "Disney Adventure World",
+      sessions: [
+        { time: "Morning — EMT 08:30", text: "Frozen Ever After first (straight to back of park). Crush's Coaster: buy PA at 09:25. Ratatouille. Then work through Pixar south side." },
+        { time: "Early afternoon", text: "Avengers Campus — Spider-Man, then PA+Rider-Switch stack for AFF and Tower of Terror." },
+        { time: "Evening (optional)", text: "Hotel break, then easy hop to DLP if energy holds: Meet Mickey, Fantasyland stroll. No throughput pressure." }
+      ]
+    },
+    {
+      key: "wed",
+      label: "Wednesday",
+      date: "May 27",
+      park: "Hybrid — DLP morning, Adventure World afternoon",
+      sessions: [
+        { time: "Morning — EMT 08:30 at DLP", text: "Rope-drop the OTHER side of Disneyland Park: Fantasyland east (small world, PhilharMagic) and Discoveryland (Star Tours, Hyperspace, Buzz, Autopia). Whatever didn't get done Mon." },
+        { time: "Late morning → hop", text: "Park-hop to Adventure World. Mickey and the Magician show + lunch (Chez Rémy if booked Tue night)." },
+        { time: "Afternoon", text: "Adventure World cleanup — rerides of the boys' favorites + anything missed Tuesday. Zero PA pressure left." },
+        { time: "Evening", text: "Family-state call at 21:30. If energy, pick ONE nighttime show: Tales of Magic (DLP castle) or Cascade of Lights (AW drones). Walking out is not failure." }
+      ]
+    }
+  ]
+};
+
 const PLAN = {
   mon: {
     label: "Monday",
@@ -298,7 +344,8 @@ const LS = {
   showtimes: "dp-showtimes",
   sort: "dp-sort",
   tab: "dp-tab",
-  day: "dp-day"
+  day: "dp-day",
+  attractionChecks: "dp-attraction-checks"
 };
 
 const state = {
@@ -306,7 +353,8 @@ const state = {
   prep: JSON.parse(localStorage.getItem(LS.prep) || "{}"),
   showtimes: JSON.parse(localStorage.getItem(LS.showtimes) || "{}"),
   sortByDrop: JSON.parse(localStorage.getItem(LS.sort) || "{}"),
-  tab: localStorage.getItem(LS.tab) || "plan",
+  attractionChecks: JSON.parse(localStorage.getItem(LS.attractionChecks) || "{}"),
+  tab: localStorage.getItem(LS.tab) || "overview",
   day: localStorage.getItem(LS.day) || autoDay(),
   allSearch: ""
 };
@@ -522,6 +570,44 @@ function renderPlan() {
   );
 }
 
+function renderOverview() {
+  const container = document.getElementById("overview-content");
+  container.innerHTML = "";
+
+  const intro = el("p", { class: "overview-intro" },
+    "High-level shape of the trip. Specific timings live in the Plan tab — but the principles below trump them."
+  );
+  container.append(intro);
+
+  const principlesCard = el("section", { class: "overview-principles" },
+    el("h2", {}, "Principles")
+  );
+  const pList = el("ul", {});
+  for (const p of OVERVIEW.principles) {
+    pList.append(el("li", {}, p));
+  }
+  principlesCard.append(pList);
+  container.append(principlesCard);
+
+  for (const day of OVERVIEW.days) {
+    const card = el("section", { class: "overview-day" });
+    card.append(el("header", { class: "overview-day-header" },
+      el("h2", {}, day.label),
+      el("span", { class: "overview-day-date" }, day.date)
+    ));
+    card.append(el("div", { class: "overview-day-park" }, day.park));
+    const sList = el("ul", { class: "overview-sessions" });
+    for (const s of day.sessions) {
+      sList.append(el("li", { class: "overview-session" },
+        el("div", { class: "overview-session-time" }, s.time),
+        el("div", { class: "overview-session-text" }, s.text)
+      ));
+    }
+    card.append(sList);
+    container.append(card);
+  }
+}
+
 function renderInfo() {
   // Static — nothing dynamic to render
 }
@@ -646,8 +732,19 @@ function renderAll() {
     }
 
     for (const a of filtered) {
-      const li = el("li", { class: "all-item" });
+      const checked = !!state.attractionChecks[a.name];
+      const li = el("li", { class: "all-item" + (checked ? " checked" : "") });
       const top = el("div", { class: "all-item-top" },
+        el("input", {
+          type: "checkbox",
+          class: "all-item-check",
+          checked,
+          onchange: (e) => {
+            state.attractionChecks[a.name] = e.target.checked;
+            save(LS.attractionChecks, state.attractionChecks);
+            renderRows();
+          }
+        }),
         el("span", { class: `chip chip-${a.rating}` }, String(a.rating)),
         el("span", { class: "all-item-name" }, a.name)
       );
@@ -790,6 +887,7 @@ function setTab(tab) {
   save(LS.tab, tab);
   document.querySelectorAll(".tab-content").forEach(s => s.classList.toggle("active", s.id === `tab-${tab}`));
   document.querySelectorAll(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === tab));
+  if (tab === "overview") renderOverview();
   if (tab === "plan") renderPlan();
   if (tab === "all") renderAll();
   if (tab === "prep") renderPrep();

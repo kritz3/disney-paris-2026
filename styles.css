@@ -155,6 +155,107 @@ main {
   display: block;
 }
 
+/* ===== Overview tab ===== */
+
+.overview-intro {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 14px;
+  padding: 0 2px;
+}
+
+.overview-principles {
+  background: var(--note-bg);
+  color: var(--note-text);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+
+.overview-principles h2 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.overview-principles ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.overview-principles li {
+  font-size: 14px;
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+.overview-day {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.overview-day-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 12px 14px 6px;
+  gap: 10px;
+}
+
+.overview-day-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.overview-day-date {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.overview-day-park {
+  padding: 0 14px 10px;
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border);
+}
+
+.overview-sessions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overview-session {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.overview-session:last-child {
+  border-bottom: none;
+}
+
+.overview-session-time {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.overview-session-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
 /* ===== Day selector ===== */
 
 .day-selector {
@@ -667,11 +768,29 @@ main {
 
 .all-item:last-child { border-bottom: none; }
 
+.all-item.checked .all-item-name {
+  text-decoration: line-through;
+  color: var(--text-faint);
+}
+
+.all-item.checked {
+  background: var(--bg-alt);
+}
+
 .all-item-top {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.all-item-check {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  margin: 0;
 }
 
 .all-item-name {
